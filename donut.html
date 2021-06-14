@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RMS Bakery</title>
+    <link rel="stylesheet" type="text/css" href="css/style1.css">
+  <link rel="stylesheet" type="text/css" href="css/style2.css">
+  <link href="https://fonts.googleapis.com/css?family=Flamenco&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+     <link rel="icon" href="logo.jpg" type="image/x-icon"/>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+<link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+   
+<style type='text/css'>
+    body{
+    font-size: 20px;
+    height: 100%;
+    overflow-x: hidden;
+
+    font-family: 'Flamenco', cursive;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('../images/S2.jpg');
+}
+.flash-button{
+    
+    padding:5px 10px;
+    color:#fff;
+    border:none;
+    border-radius:5px;
+    
+    animation-name: flash;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+    //Firefox 1+
+    -webkit-animation-name: flash;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+
+    //Safari 3-4
+    -moz-animation-name: flash;
+    -moz-animation-duration: 1s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+}
+
+@keyframes flash {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1.0; }
+}
+
+//Firefox 1+
+@-webkit-keyframes flash {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1.0; }
+}
+
+//Safari 3-4
+@-moz-keyframes flash {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1.0; }
+}
+ .zoomin img {
+      height: 200px;
+      width: 200px;
+      -webkit-transition: all 2s ease;
+      -moz-transition: all 2s ease;
+      -ms-transition: all 2s ease;
+      transition: all 2s ease;
+    }
+    .gallery img:hover {
+      width: 300px;
+      height: 300px;
+    }
+</style>
+
+<body>
+  <header>
+    <nav>
+      <div class="row clearfix">
+        <a href="index.html"><img src="images/logo.jpg" class="logo"></a>
+        <ul class="main-nav animated slideInDown" id="check-class">
+          <li><a href="index.html">home</a></li>
+          <li><a href="cake.html">Cakes</a></li>
+          <li><a href="choco.html">Chocolates</a></li>
+          <li><a href="donut.html">Donuts</a></li>
+          <li><a href="signup.php">Sign Up</a></li>
+          <li><a href="login.php">Login</a></li>
+                    <li><a href="contact.php">Contact</a></li>
+          
+               
+                    <li class="submenu">
+                            <img src="img/cart.png" id="img-cart">
+                            <div id="shopping-cart">
+                                    <table id="cart-content" class="u-full-width">
+                                        <thead>
+                                            <tr>
+                                                <th>Image</th>
+                                                <th>Name</th>
+                                                <th>Price</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>
+
+                                    <a href="#" id="clear-cart" class="button u-full-width" style="color: brown">Clear Cart</a>
+                            </div>
+                    </li>
+                 </ul>   
+        
+        <a href="#" class="mobile-icon"   onclick="slideshow()"> <i class="fa fa-bars"></i></a>
+    
+    </nav>
+
+
+    <div id="courses-list" class="container">
+        <h1 id="heading" class="heading" style="text-align: center;">Donuts</h1>
+         <p  style="text-align: center;color: white;">Select Donuts of your choice</p>
+        <div class="row">
+             <div class="four columns">
+                <button type="button" class="flash-button" style="background:green;">veg</button>
+                    <div class="card">
+                        <img src="images/do1.jpg" class="course-image u-full-width" style="width: 200px;height: 180px;box-shadow: 10px 10px 5px #EDE7E2;">
+                        <div class="info-card">
+                            <h4>Chocolate Donuts</h4>
+                           
+                            <p class="price"><span class="u-pull-right ">Rs.150</span></p>
+                            <a href="#" class="u-full-width button-primary button input add-to-cart" data-id="1"onclick="showAlert()" style="background-color: #ECC36A;color:brown;border:#ECC36A;">Add to Cart</a>
+                        </div>
+                    </div> <!--.card-->
+            </div>
+
+             
+            <div class="four columns">
+                <button type="button" class="flash-button" style="background:green;">veg</button>
+                    <div class="card">
+                        <img src="images/do2.jpg" class="course-image u-full-width" style="width: 200px;height: 180px;box-shadow: 10px 10px 5px #EDE7E2;">
+                        <div class="info-card">
+                            <h4>Rainbow Donuts</h4>
+                            
+                            <p class="price"><span class="u-pull-right ">Rs.270</span></p>
+                            <a href="#" class="u-full-width button-primary button input add-to-cart" data-id="2"onclick="showAlert()" style="background-color: #ECC36A;color:brown;border:#ECC36A;">Add to Cart</a>
+                        </div>
+                    </div> <!--.card-->
+            </div>
+
+   
+            <div class="four columns">
+                <button type="button" class="flash-button" style="background:green;">veg</button>
+                    <div class="card">
+                        <img src="images/do3.jpg" class="course-image u-full-width" style="width: 200px;height: 180px;box-shadow: 10px 10px 5px #EDE7E2;">
+                        <div class="info-card">
+                            <h4>Vanilla Donuts</h4>
+                            
+                            <p class="price"><span class="u-pull-right ">Rs.230</span></p>
+                            <a href="#" class="u-full-width button-primary button input add-to-cart" data-id="3"onclick="showAlert()" style="background-color: #ECC36A;color:brown;border:#ECC36A;">Add to Cart</a>
+                        </div>
+                    </div> <!--.card-->
+            </div>
+
+        </div> <!--.row-->
+        <div class="row">
+                      <div class="four columns">
+                <button type="button" class="flash-button" style="background:green;">veg</button>
+                    <div class="card">
+                       <img src="images/do4.jpg" class="course-image u-full-width" style="width: 200px;height: 180px;box-shadow: 10px 10px 5px #EDE7E2;">
+                        <div class="info-card">
+                            <h4>Glazed Donuts</h4>
+                            
+                            <p class="price"><span class="u-pull-right ">Rs.250</span></p>
+                            <a href="#" class="u-full-width button-primary button input add-to-cart" data-id="4"onclick="showAlert()" style="background-color: #ECC36A;color:brown;border:#ECC36A;">Add to Cart</a>
+                        </div>
+                    </div> <!--.card-->
+            </div>
+                       <div class="four columns">
+                <button type="button" class="flash-button" style="background:red;">Non-veg</button>
+                    <div class="card">
+                       <img src="images/do5.jpg" class="course-image u-full-width" style="width: 200px;height: 180px;box-shadow: 10px 10px 5px #EDE7E2;">
+                        <div class="info-card">
+                            <h4>Rose Flavoured Donut</h4>
+                            
+                            <p class="price"><span class="u-pull-right ">Rs.30</span></p>
+                            <a href="#" class="u-full-width button-primary button input add-to-cart" data-id="4"onclick="showAlert()" style="background-color: #ECC36A;color:brown;border:#ECC36A;">Add to Cart</a>
+                        </div>
+                    </div> <!--.card-->
+            </div>
+                      <div class="four columns">
+                <button type="button" class="flash-button" style="background:red;">Non-veg</button>
+                    <div class="card">
+                       <img src="images/do6.jpg" class="course-image u-full-width" style="width: 200px;height: 180px;box-shadow: 10px 10px 5px #EDE7E2;">
+                        <div class="info-card">
+                            <h4>Darkchoco Donuts</h4>
+                            
+                            <p class="price"><span class="u-pull-right ">Rs.230</span></p>
+                            <a href="#" class="u-full-width button-primary button input add-to-cart" data-id="5"onclick="showAlert()" style="background-color: #ECC36A;color:brown;border:#ECC36A;">Add to Cart</a>
+                        </div>
+                    </div> <!--.card-->
+            </div>
+        </div> <!--.row-->
+        <div class="row">
+                    <div class="four columns">
+                <button type="button" class="flash-button" style="background:red;">Non-veg</button>
+                    <div class="card">
+                        <img src="images/do7.jpg" class="course-image u-full-width" style="width: 200px;height: 180px;box-shadow: 10px 10px 5px #EDE7E2;">
+                        <div class="info-card">
+                            <h4>OrangeDunkin Donut</h4>
+                            
+                            <p class="price"><span class="u-pull-right ">Rs.230</span></p>
+                            <a href="#" class="u-full-width button-primary button input add-to-cart" data-id="6"onclick="showAlert()" style="background-color: #ECC36A;color:brown;border:#ECC36A;">Add to Cart</a>
+                        </div>
+                    </div> <!--.card-->
+            </div>
+                     <div class="four columns">
+                <button type="button" class="flash-button" style="background:red;">Non-veg</button>
+                    <div class="card">
+                       <img src="images/cho8.jpg" class="course-image u-full-width" style="width: 200px;height: 180px;box-shadow: 10px 10px 5px #EDE7E2;">
+                        <div class="info-card">
+                            <h4>Oreo Donuts</h4>
+                            
+                            <p class="price"><span class="u-pull-right ">Rs.500</span></p>
+                            <a href="#" class="u-full-width button-primary button input add-to-cart" data-id="7"onclick="showAlert()" style="background-color: #ECC36A;color:brown;border:#ECC36A;">Add to Cart</a>
+                        </div>
+                    </div> <!--.card-->
+            </div>
+                      <div class="four columns">
+                <button type="button" class="flash-button" style="background:red;">Non-veg</button>
+                    <div class="card">
+                        <img src="images/do9.jpg" class="course-image u-full-width" style="box-shadow: 10px 10px 5px #EDE7E2;width: 200px;height: 180px;">
+                        <div class="info-card">
+                            <h4>Galaxy donuts</h4>
+                            
+                            <p class="price"><span class="u-pull-right ">Rs.30</span></p>
+                            <a href="#" class="u-full-width button-primary button input add-to-cart" data-id="8"onclick="showAlert()" style="background-color: #ECC36A;color:brown;border:#ECC36A;">Add to Cart</a>
+                        </div>
+                    </div> <!--.card-->
+            </div>
+        </div> <!--.row-->
+        
+    </div>
+          <script>
+  function showAlert() {
+    var myText = "1 item added to Cart!!!";
+    alert (myText);
+  }
+  </script>
+ <script src="js/app.js"></script>
+    <footer><p style="margin-left:500px; font-size:12px; ;font-family:arial;color: white;"> &copy 2019 RMS Bakery. All rights reserved. <a href="privacy.html" style="text-decoration:none" target="_blank"><font color="white">Privacy Policy</font></a> | <a href="terms.html" target="_blank" style="text-decoration: none"> <font color="white">Terms of Use</font></a></p></footer> 
+  <script type="text/javascript">
+  function slideshow(){
+    var x =document.getElementById('check-class');
+    if(x.style.display==="none"){
+      x.style.display="block";
+
+    }
+    else{
+      x.style.display="none";
+    }
+
+  }
+    </script>
+
+
+</body>
+</html> 

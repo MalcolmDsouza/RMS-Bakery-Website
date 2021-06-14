@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RMS Bakery</title>
+	<link rel="stylesheet" type="text/css" href="css/style3.css">
+  <link rel="stylesheet" type="text/css" href="css/style2.css">
+  <link href="https://fonts.googleapis.com/css?family=Flamenco&display=swap" rel="stylesheet">
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+   <link rel="icon" href="logo.jpg" type="image/x-icon"/>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+<body>
+	
+	<style>
+	    .mySlides {display:none;}
+      
+	    </style>
+</head>	    
+
+
+	<header>
+		<nav style="font-family: 'Flamenco', cursive;font-size: 20px;">
+			<div class="row clearfix">
+				<img src="images/logo.jpg" class="logo">
+				<ul class="main-nav animated slideInDown" id="check-class">
+					<li><a href="index.html">home</a></li>
+					<li><a href="cake.html">Cakes</a></li>
+					<li><a href="choco.html">Chocolates</a></li>
+					<li><a href="donut.html">Donuts</a></li>
+					<li><a href="signup.php">Sign Up</a></li>
+					<li><a href="login.php">Login</a></li>
+          <li><a href="contact.php">Contact</a></li>
+					<li><a href=""><img src="images/cart.png" id="img-cart"></a></li>
+				</ul>
+				<a href="#" class="mobile-icon"   onclick="slideshow()"> <i class="fa fa-bars"></i></a>
+			</div>
+		</nav>
+		<br/>
+	
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<div class="w3-content w3-section" style="max-width:800px">
+  <img class="mySlides" src="images/gal0.jpg" style="width:100%">
+  <img class="mySlides" src="images/gal3.jpg" style="width:100%">
+  <img class="mySlides" src="images/gal2.jpg" style="width:100%">
+  <img class="mySlides" src="images/gal4.jpg" style="width:100%">
+  <img class="mySlides" src="images/gal5.jpg" style="width:100%">
+  <img class="mySlides" src="images/gal6.jpg" style="width:100%">
+</div>
+
+<div class="main">
+        <div class="products">
+            <div class="column">
+                <div class="card">
+                </div>
+            </div>
+             <div class="column">
+                <div class="card">
+                </div>
+            </div>
+             <div class="column">
+                <div class="card">
+                  <h1 align="centre" style="font-family: 'Flamenco', cursive;font-size: 20px;">Our Team</h1>
+                </div>
+            </div>
+             <div class="column">
+                <div class="card">
+                </div>
+            </div>
+             <div class="column">
+                <div class="card">
+                </div>
+            </div>
+             <div class="column">
+                <div class="card">
+                  <div class="gallery">
+                                    
+  <a target="_blank" href="images/rutvi.jpg">
+    <img src="images/rutvi.jpg" alt="Cinque Terre" width="200" height="200">
+  </a>
+</div>
+                    <h3 align="centre" style="font-family: 'Flamenco', cursive;font-size: 20px;">Rutvi Shah</h3>
+                    <p>Our Head Chef</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                   <div class="gallery">
+                                    
+  <a target="_blank" href="images/shweta.jpg">
+    <img src="images/shweta.jpg" alt="Cinque Terre" width="200" height="200">
+  </a>
+</div>
+                    <h3 style="font-family: 'Flamenco', cursive;font-size: 20px;">Shweta Pai</h3>
+                    <p>Our Owner</p>
+                </div>
+            </div>
+           
+
+            <div class="column">
+                
+                <div class="card">
+                          <div class="gallery">
+                                    
+  <a target="_blank" href="images/malcolm.jpg">
+    <img src="images/malcolm.jpg" alt="Cinque Terre" width="200" height="200">
+  </a>
+</div>
+                    <h3 style="font-family: 'Flamenco', cursive;font-size: 20px;">Malcolm D'souza</h3>
+                    <p>Our Manager</p>
+                </div>
+            </div>
+                   
+                   
+                </div>
+            </div>
+           
+        </div>
+        </div>
+    </div>
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+
+<br/>
+<br/>
+<div>
+	<h1 align="centre" style="font-family: 'Flamenco', cursive;font-size: 20px;">Our vision</h1>
+  <article style="font-family: 'Flamenco', cursive;font-size: 20px;">
+	 <P>
+        Our vision for the bakery and love for baking transpired to be something innovative which can be shared globally. Also to to allow people to share their art of Baking via upload facility. 
+      </P><h1>Our success story</h1>
+        One of the key factors in our bakery success has been its ethos that items taste best when they’ve been freshly baked using exactly the same ingredients and techniques as those used in home baking. For this reason, each and every RMS Bakery branch has its own kitchen and a team of resident expert bakers and cake decorators. This enables the bakery to bake to order and to only serve its customers cakes that have been freshly baked the very same day.
+ 
+
+The RMS bakery offers a full range of Indian baked treats and desserts including cupcakes, layer cakes, brownies, pies, cheesecakes and much more. It played a lead role in bringing cupcakes and Red Velvet cake to popularity and continues to innovate, introducing new and exciting cupcake flavours through its ‘Monthly Specials’ series. The bakery also caters for customers requiring cakes and cupcakes for weddings, birthdays, events and other celebrations.
+
+There is no secret to what makes The RMS Bakery’s cakes and other treats taste so good. We give opportunity to our budding bakers to showcase their talents through <b>UPLOADING THEIR VIDEOS</b>.  
+
+No matter where a RMS Bakery branch pops up, customers can always be assured of a welcoming environment, friendly staff and the delightful smells and tastes of authentic Indian home baking.</P> </article>    
+     </div>   
+ <footer><p style="margin-left:500px; font-size:12px; font-family:arial; color:'white'">&nbsp; &copy 2019 RMS Bakery. All rights reserved. <a href="privacy.html" style="text-decoration:none" target="_blank"><font color="white">Privacy Policy</font></a> | <a href="terms.html" target="_blank" style="text-decoration: none"> <font color="white">Terms of Use</font></a></p></footer>
+<!--<iframe src="http://www.youtube.com/embed/n4ZhS91DDZE"
+   width="560" height="315" frameborder="0" allowfullscreen></iframe>
+
+<video class="videos" autoplay  loop="on" muted="on" width="1000px" height="500px"style="transform: translateX(25.78%);">
+  <source src="vid/rmsbk.mp4" type="video/mp4">
+  <source src="vid/rmsbk.ogg" type="video/ogg">  
+</video>-->
+
+	<script type="text/javascript">
+	function slideshow(){
+		var x =document.getElementById('check-class');
+		if(x.style.display==="none"){
+			x.style.display="block";
+
+		}
+		else{
+			x.style.display="none";
+		}
+
+	}
+</script>
+
+</body>
+</html>	
